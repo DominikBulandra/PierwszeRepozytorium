@@ -8,8 +8,15 @@ public static void main(String[] args) {
 	int min=klawiatura.nextInt();
 	System.out.println("Podaj maximum ");
 	int max=klawiatura.nextInt();
-	Random rand=new Random();
+	if(max<min)
+	{
+		System.out.println("Zle parametry max < min ");
+	}
+	else
+	{
+Random rand=new Random();
 	int a = rand.nextInt(max - min + 1) + min;
+
 	System.out.println("wylosowano liczbe: "+ a);
 	 for(int i=1; i<1000; i++){
 		if(i%a==0){
@@ -19,6 +26,9 @@ public static void main(String[] args) {
 
               
          }
+
+	}	
+	
         
 }
 }
